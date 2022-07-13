@@ -11,7 +11,7 @@
 
 # Site: 
 <!-- TODO: METTRE À JOUR L'URL DE LA PAGE D'ACCUEIL UNE FOIS LE DÉPLOIEMENT EN PROD COMPLÉTÉ -->
-- https://cqen-qdce.github.io/plateforme-accueil-centre-innovation/
+- https://ceai.cqen.ca
 
 ### Pipeline de déploiement en production
 Le pipeline fonctionne sur : 
