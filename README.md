@@ -1,9 +1,19 @@
+<!-- LOGO DU PROJET OU DE L'ORGANISME PUBLIQUE -->
+
+<div>
+    <img src="./images/mcn.png" />
+</div>
+
+<!-- PROJET -->
+# Fonctionnement du Pipeline: 
+  Explication sur le fonctionnement du pipeline ainsi que les pré-requis pour héberger un site localement
+  Cette plate forme Web est un site statique développé en Ruby avec Jekyll, déployé sur AWS S3 et exposé avec AWS CloudFront.
+
 # Site: 
 <!-- TODO: METTRE À JOUR L'URL DE LA PAGE D'ACCUEIL UNE FOIS LE DÉPLOIEMENT EN PROD COMPLÉTÉ -->
 - https://cqen-qdce.github.io/plateforme-accueil-centre-innovation/
 
 ### Pipeline de déploiement en production
-
 Le pipeline fonctionne sur : 
 -	AWS CodePipeline
 Le pipeline est démarré par : 
@@ -11,10 +21,10 @@ Le pipeline est démarré par :
 
 Vous pourrez ensuite voir le processus s’exécuter et voir les détails de chaque étape d'exécution en clicant sur le pipeline en exécution.
 
-### Pour héberger le site localement:
+### Étapes pour héberger le site localement:
 1. Cloner le projet.
 2. Faire la commande `git submodule init` pour initialiser le submodule dans votre répertoire local, puis `git submodule update` pour pull la dernière version du submodule.
-3. Avoir ruby v2.4.0 ou + installé sur votre poste et faire la commande ```gem install jekyll bundler```. (suivre la procédure d'installation)
+3. Avoir ruby v3.0.4 ou + installé sur votre poste et faire la commande ```gem install jekyll bundler``` [Suivre la procédure d'installation](./procedure.md)
 4. Faire la commande ```bundle exec jekyll server``` à la racine du site.
 
 ### Pour mettre à jour le submodule (contenu du site): 
