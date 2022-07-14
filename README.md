@@ -35,6 +35,15 @@
 - `assets` : (à vérifier) contient les contenus multimédia du site ainsi que les feuilles de style utilisées, le css généré par le css se retrouvera dans ce dossier lors du build
 - `_site` : (généré lors d'un push) site résultant du build
 
+### Précision sur la création des pages avec Jekyll:
+ Pour s'assurer que le liens hypertexte soit généré d'une manière compatible avec le service de site static S3, il faut:
+  - Ajouter dans le fichier nom-de-la-page.markdown  qui se trouve dans le dossier _pages un permalink: /nom-de-la-page/index.html ce qui va générer automatiquement 
+    un nouveau fichier nom-de-la-page/index.html dans le dossier _site.
+ 
+### Pour mettre à jour le submodule (contenu du site): 
+```bash
+git submodule update --remote
+``` 
 ### Pipeline de déploiement en production
 Le pipeline fonctionne sur : 
 -	AWS CodePipeline
@@ -43,10 +52,6 @@ Le pipeline est démarré par :
 Vous pourrez ensuite voir le processus s’exécuter et voir les détails de chaque étape d'exécution en clicant sur le pipeline en exécution.
 https://github.com/CQEN-QDCE/ceai-cqen-deployments/tree/main/plateform_web
 
-### Pour mettre à jour le submodule (contenu du site): 
-```bash
-git submodule update --remote
-``` 
 ### Références:
  - https://platoniq.github.io/decidim-install/decidim-focal/
  - https://jekyllrb.com/docs/installation/ubuntu/

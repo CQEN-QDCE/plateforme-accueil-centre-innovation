@@ -61,9 +61,6 @@ rbenv install -l
  - gem env home
  - bundler install
 
-# Ruby et Jekyll étant installés on peux faire la commande suivante pour exécuter Jekyll et voir le site localement:
- - bundle exec jekyll server
-
 # Précision sur la création des pages avec Jekyll:
  Pour s'assurer que le liens hypertexte soit généré d'une manière compatible avec le service de site static S3, il faut:
   - Ajouter dans le fichier nom-de-la-page.markdown  qui se trouve dans le dossier _pages un permalink: /nom-de-la-page/index.html ce qui va générer automatiquement 
