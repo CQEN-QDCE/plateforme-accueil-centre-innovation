@@ -1,5 +1,4 @@
 ### Procédure d'installation de Ruby
-https://platoniq.github.io/decidim-install/decidim-focal/
 
 # Tout d'abord, gardons notre système à jour :
  - sudo apt update
@@ -61,8 +60,4 @@ rbenv install -l
  - gem env home
  - bundler install
 
-# Précision sur la création des pages avec Jekyll:
- Pour s'assurer que le liens hypertexte soit généré d'une manière compatible avec le service de site static S3, il faut:
-  - Ajouter dans le fichier nom-de-la-page.markdown  qui se trouve dans le dossier _pages un permalink: /nom-de-la-page/index.html ce qui va générer automatiquement 
-    un nouveau fichier nom-de-la-page/index.html dans le dossier _site.
- 
+

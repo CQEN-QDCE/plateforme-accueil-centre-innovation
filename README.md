@@ -5,8 +5,8 @@
 </div>
 
 <!-- PROJET -->
-# Plate forme d'accueil du CEAI 
-  La plate forme d' accueil Web du Centre d'Expertise Appliquée en Innovation du CQEN (CEAI) est un site statique développé en Ruby avec Jekyll, déployé sur AWS S3 et exposé avec AWS CloudFront.
+# Plateforme d'accueil du CEAI 
+  La plateforme d' accueil Web du Centre d'Expertise Appliquée en Innovation du CQEN (CEAI) est un site statique développé en Ruby avec Jekyll, déployé sur AWS S3 et exposé avec AWS CloudFront.
 
 ## Site
 - https://ceai.cqen.ca/
@@ -48,9 +48,9 @@ git submodule update --remote
 Le pipeline fonctionne sur : 
 -	AWS CodePipeline
 Le pipeline est démarré par : 
--	Un Github Pull Request se faisant accepter sur la branche main OU tout autre push sur la branche main. Il est aussi possible de démarrer le pipeline manuellement à partir de l'interface d'AWS. Pour ce faire, aller sur AWS CodePipeline, seléctionner le pipeline voulu et cliquer sur « release change ».
-Vous pourrez ensuite voir le processus s’exécuter et voir les détails de chaque étape d'exécution en clicant sur le pipeline en exécution.
-https://github.com/CQEN-QDCE/ceai-cqen-deployments/tree/main/plateform_web
+-	Un Github Pull Request se faisant accepter sur la branche main OU tout autre push sur la branche main. I
+Vous pourrez voir le processus en cours d'exécution et voir les détails de chaque étape d'exécution en cliquant sur le pipeline sur le console AWS.
+Voici le [lien](https://github.com/CQEN-QDCE/ceai-cqen-deployments/tree/main/plateform_web)pour que vous puissiez voir les processus de provisionnement  de l'environnement sur AWS et tous les détails de l'architecture
 
 ### Références:
  - https://platoniq.github.io/decidim-install/decidim-focal/
