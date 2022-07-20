@@ -4,23 +4,41 @@
 ### Gardons notre système à jour :
 
 ```
-   sudo apt update
-   sudo apt upgrade
-   sudo apt autoremove
+sudo apt update
+```
+
+```
+sudo apt upgrade
+```
+
+```
+sudo apt autoremove
 ```
 
 # Installez ruby, en utilisant la méthode rbenv:
 
 ```
-   git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-   echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-   echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-   source ~/.bashrc
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+```
+
+```
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+```
+
+```
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+```
+
+```
+source ~/.bashrc
 ```
 # Vérifiez si vous avez correctement installé rbenv, l'exécution de la commande type rbenv devrait vous donner cette réponse :
 
+```
+type rbenv
+```
+
 ```bash
-decidim@decidim:~$ type rbenv
 rbenv is a function
 rbenv ()
 {
@@ -40,12 +58,19 @@ rbenv ()
 }
 ```
 # Installez ruby-build pour simplifier l'installation de ruby ​​:
-```git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build```
+
+```
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+```
 
 À ce stade, vous devriez être en mesure d'exécuter la commande rbenv install -l qui vous donnera toutes les versions de ruby ​​disponibles :
 
-```bash
+```
 rbenv install -l
+```
+
+```bash
+
 Available versions:
   2.5.8
   2.6.6
@@ -60,20 +85,34 @@ Available versions:
 # Utilisez la version 3.0.4 en exécutant les commandes suivantes :
 
 ```
-   rbenv install 3.0.4
-   rbenv global 3.0.4
- ```
+rbenv install 3.0.4
+```
+
+```  
+rbenv global 3.0.4
+```
  Remplacer 3.0.4 par la version que vous souhaitez installer
 
 # Vérifiez que tout est en ordre en exécutant la commande
 
+```
+ruby -v
+```
+
 ```bash
-   ruby -v:
-   ruby 2.6.3p62 (2019-04-16 revision 67580) [x86_64-linux]
+ruby 2.6.3p62 (2019-04-16 revision 67580) [x86_64-linux]
 ```
+
 # Installez les gems et le bundler avec les commandes suivantes :
+
 ```
-   echo "gem: --no-document" > ~/.gemrc 
-   gem install bundler
-   gem env home
- ```
+echo "gem: --no-document" > ~/.gemrc 
+```
+
+```
+gem install bundler
+```
+
+```
+gem env home
+```
