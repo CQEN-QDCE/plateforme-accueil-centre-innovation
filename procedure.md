@@ -1,9 +1,10 @@
 ### Procédure d'installation de Ruby
 
-# Tout d'abord, gardons notre système à jour :
- - sudo apt update
- - sudo apt upgrade
- - sudo apt autoremove
+# Prémière étape:
+### Gardons notre système à jour :
+   - sudo apt update
+   - sudo apt upgrade
+   - sudo apt autoremove
 
 # Installez ruby, en utilisant la méthode rbenv .
  - git clone https://github.com/rbenv/rbenv.git ~/.rbenv
@@ -11,7 +12,7 @@
  - echo 'eval "$(rbenv init -)"' >> ~/.bashrc
  - source ~/.bashrc
 
-# Maintenant, vous devez vérifier si vous avez correctement installé rbenv, l'exécution de la commande type rbenv devrait vous donner cette réponse :
+# Vérifiez si vous avez correctement installé rbenv, l'exécution de la commande type rbenv devrait vous donner cette réponse :
 <!--decidim@decidim:~$ type rbenv
 rbenv is a function
 rbenv ()
@@ -45,16 +46,16 @@ rbenv install -l
   truffleruby-20.1.0
   truffleruby+graalvm-20.1.0-->
 
-# Nous allons utiliser la version 2.6.3, alors exécutez ces commandes :
+# Utilisez la version 3.0.4 en exécutant les commandes suivantes :
  - rbenv install 3.0.4
  - rbenv global 3.0.4
 <!--Remplacer 3.0.4 par la version que vous souhaitez installer-->
 
-# Vous pouvez maintenant vérifier que tout est en ordre en exécutant la commande
+# Vérifiez que tout est en ordre en exécutant la commande
  - ruby -v:
  <!--ruby 2.6.3p62 (2019-04-16 revision 67580) [x86_64-linux]-->
 
-# Nous allons maintenant installer les gems et le bundler avec les commandes suivantes :
+# Installez les gems et le bundler avec les commandes suivantes :
  - echo "gem: --no-document" > ~/.gemrc 
  - gem install bundler
  - gem env home
