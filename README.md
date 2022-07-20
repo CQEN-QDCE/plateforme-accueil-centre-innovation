@@ -23,8 +23,11 @@
 ### Étapes pour héberger le site localement:
 1. Cloner le projet.
 2. Faire la commande `git submodule init` pour initialiser le submodule dans votre répertoire local, puis `git submodule update` pour pull la dernière version du submodule.
-3. Avoir ruby v3.0.4 ou + installé sur votre poste et faire la commande ```gem install jekyll bundler``` [Suivre la procédure d'installation](./procedure.md)
-4. Faire la commande ```bundle exec jekyll server``` à la racine du site.
+3. Installez ruby v3.0.4 ou + sur votre poste [Suivre la procédure d'installation](./procedure.md)
+4. Exécutez la commande suivante pour installer les gem nécessaires à la plateforme web
+```bundler install```
+5. Exécutez la commande suivante pour démarrer le serveur 
+```bundle exec jekyll server```
 
 ##  Contenu
 ### Explication des dossiers
