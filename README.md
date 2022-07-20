@@ -48,7 +48,8 @@ git submodule update --remote
 ## Déploiement en production
 Le pipeline de deploement sur AWS est démarré par : 
 -	Un Github Pull Request se faisant accepter sur la branche main OU tout autre push sur la branche main. 
-Vous pourrez voir le processus en cours d'exécution et voir les détails de chaque étape d'exécution en cliquant sur le pipeline sur le console AWS.
+
+- Vous pourrez voir le processus en cours d'exécution et voir les détails de chaque étape d'exécution en cliquant sur le pipeline sur le console AWS.
 
 - Voici le [lien](https://github.com/CQEN-QDCE/ceai-cqen-deployments/tree/main/plateform_web)pour que vous puissiez voir les processus de provisionnement  de l'environnement sur AWS et tous les détails de l'architecture
 
