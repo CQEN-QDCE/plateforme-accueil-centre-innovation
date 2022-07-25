@@ -1,21 +1,6 @@
 ### Procédure d'installation de Ruby
 
-# Prémière étape:
-### Gardons notre système à jour :
-
-```
-sudo apt update
-```
-
-```
-sudo apt upgrade
-```
-
-```
-sudo apt autoremove
-```
-
-# Installez ruby, en utilisant la méthode rbenv:
+# Prémière étape: Installez ruby, en utilisant la méthode rbenv:
 
 ```
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
