@@ -42,8 +42,14 @@ defaults:
       layout: post
       categories: documentation
 
+  - scope:
+      path: "ceai-cqen-documentation"
+      type: pages
+    values:
+      layout: page
+
 collections:
-  documentation-labs:
+  experimentations:
     output: true
 # Exclude from processing.
 # The following items will not be processed, by default.

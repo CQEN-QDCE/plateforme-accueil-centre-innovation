@@ -26,7 +26,7 @@ def process_file(fileName, date, repoName, url, repoUrl)
     str = 
     "---\n" +
     "date: #{date}\n" +
-    "permalink: documentation-labs/#{repoName}/#{fileName.split('.')[0]}.html\n" +
+    "permalink: experimentations/#{repoName}/#{fileName.split('.')[0]}.html\n" +
     "layout: post\n" +
     "type: posts\n" +
     "project: #{repoName}\n" +
@@ -50,7 +50,7 @@ def create_index(path, repoName, projectTitle, url, description, repoDate)
     "title: #{projectTitle}\n" +
     "layout: index-lab\n" +
     "project: #{repoName}\n" +
-    "permalink: documentation-labs/#{repoName.gsub(' ', '-')}/index.html\n" +
+    "permalink: experimentations/#{repoName.gsub(' ', '-')}/index.html\n" +
     "index: true\n" +
     "github: #{url}\n" +
     "date: #{repoDate}\n" +

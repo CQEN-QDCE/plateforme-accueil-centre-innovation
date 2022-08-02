@@ -1,6 +1,6 @@
 ---
-layout: documentation-labs
-title: Documentation des laboratoires
-permalink: /documentation-labs/index.html
-short-title: Documentation Labs
+layout: experimentations
+title: Expérimentations
+permalink: /experimentations/index.html
+short-title: Expérimentations
 ---

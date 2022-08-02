@@ -20,7 +20,7 @@ def main
     puts "==========================================="
     
     # Deletes current site folder if it existed
-    system("rm -rf ../_documentation-labs/*")
+    system("rm -rf ../_experimentations/*")
 
     res.each do |key, content|
         begin
@@ -36,7 +36,7 @@ def main
             # gets repo owner (ex: CQEN-QDCE)
             owner = repoPath.split('/')[0]
 
-            system("mkdir ../_documentation-labs/#{repoName}")
+            system("mkdir ../_experimentations/#{repoName}")
 
             # Get repo description and last push to default branch
             command = 'curl -s -H "Authorization: Bearer ' + secret + '" \
@@ -73,10 +73,18 @@ def main
                     puts("-- #{path}".yellow)
                     url = path
                     fileName = path.split("/")[-1]
-                    filePath = path.split("blob/")[-1]
-                    branch = filePath.split("/")[0]
-                    filePath = filePath.gsub(branch + "/", "")
-
+                    filePath1 = path.split("blob/")[-1]
+                    branch = filePath1.split("/")[0]
+                    filePath = filePath1.gsub(branch + "/", "")
+                    if trace
+                        puts("##############################")
+                        puts(">>> url: #{url}")
+                        puts(">>> fileName: #{fileName}")
+                        puts(">>> filePath1: #{filePath1}")
+                        puts(">>> branch: #{branch}")
+                        puts(">>> filePath: #{filePath}")
+                        puts("##############################")
+                    end
                     # getting the date with the graphql github api
                     command = 'curl -s -H "Authorization: Bearer ' + secret + '" \
                     -H  "Content-Type:application/json" \
@@ -95,13 +103,16 @@ def main
                     end
 
                     raw = path.gsub("github.com", "raw.githubusercontent.com").gsub("/blob/", "/") # Gets raw file from normal url
-                    system("wget \"#{raw}\"")
+                    puts("wget --header=\"Authorization: token #{secret}\" #{raw}")
+
+                    system("wget --header=\"Authorization: token #{secret}\" #{raw}")
+                    
                     if (!$?.success?)
                         raise "Impossible to wget file from #{path}, check if path provided is valid.\n"
                     end
                     process_file(fileName, dateIso, repoName, path, path.chomp(filePath))
-                    system("mv #{fileName} ../_documentation-labs/#{repoName}/#{dateShort}-#{fileName}")
-                    create_index("../_documentation-labs/#{repoName}", "#{repoName}", content["project-title"], 
+                    system("mv #{fileName} ../_experimentations/#{repoName}/#{dateShort}-#{fileName}")
+                    create_index("../_experimentations/#{repoName}", "#{repoName}", content["project-title"], 
                         content["url"], description, repoDate)
                     nb_success += 1
                 rescue => e

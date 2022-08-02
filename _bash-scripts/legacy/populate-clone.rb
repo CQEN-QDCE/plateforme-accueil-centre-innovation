@@ -15,8 +15,8 @@ def main
         repoName = (content["url"].split("/")[-1]).split(".")[0] 
 
         # Deletes current site folder if it existed
-        system("rm -rf ../../_documentation-labs/#{repoName}")
-        system("mkdir ../../_documentation-labs/#{repoName}")
+        system("rm -rf ../../_experimentations/#{repoName}")
+        system("mkdir ../../_experimentations/#{repoName}")
 
         # Git clone the whole project
         system("rm -rf #{repoName}")
@@ -28,8 +28,8 @@ def main
             dateShort = `cd #{repoName} ; git log -1 --format=%cs #{path}`.chomp() # Gets the date of the last commit on this file
             dateIso = `cd #{repoName} ; git log -1 --format=%cI #{path}`.chomp() # Gets the date of the last commit on this file Iso format
             file_prepend("#{repoName}/#{path}", dateIso, "#{repoName}")
-            system("mv #{repoName}/#{path} ../_documentation-labs/#{repoName}/#{dateShort}-#{fileName}")
-            create_index("../_documentation-labs/#{repoName}", "#{repoName}", "#{content["project-title"]}")
+            system("mv #{repoName}/#{path} ../_experimentations/#{repoName}/#{dateShort}-#{fileName}")
+            create_index("../__experimentations/#{repoName}", "#{repoName}", "#{content["project-title"]}")
         end
     
         # Remove the cloned repo
