@@ -31,6 +31,7 @@ permalink: none
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-relative-links
 
 # Default settings for the posts
 defaults:
@@ -82,6 +83,10 @@ markdown: kramdown
 
 kramdown:
   input: GFM
+
+relative_links:
+  enabled:     true
+  collections: true
 
 
 
