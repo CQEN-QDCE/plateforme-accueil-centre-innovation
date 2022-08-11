@@ -32,6 +32,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-relative-links
+  - jekyll-optional-front-matter
 
 # Default settings for the posts
 defaults:
@@ -74,11 +75,13 @@ collections:
 #   - vendor/ruby/
 exclude:
   - Dockerfile
-  - README.md
   - .codebuild/
 
 include:
   - _pages
+  - README.md
+  - CONTRIBUTING.md
+  - LICENCE.md
 markdown: kramdown
 
 kramdown:

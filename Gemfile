@@ -38,3 +38,7 @@ gem "graphql", "~> 1.12.14"
 gem "addressable", ">= 2.8.0"
 gem "webrick", "~> 1.7"
 gem 'jekyll-relative-links'
+
+group :jekyll_plugins do
+  gem 'jekyll-optional-front-matter'
+end
