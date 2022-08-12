@@ -22,7 +22,6 @@ module IndexGenerator
         'layout' => page.data['layout'],
         'index' => true
       }
-      #self.read_yaml(File.join(site.source, '_layouts'), page.data['layout'])
       self.process(@name)
     end
   end
