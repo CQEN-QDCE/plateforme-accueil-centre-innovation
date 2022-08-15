@@ -2,3 +2,8 @@
 	path = plateforme-accueil-contenu
 	url = https://github.com/CQEN-QDCE/plateforme-accueil-contenu.git
 	branch = master
+[submodule "ceai-cqen-documentation"]
+	path = ceai-cqen-documentation
+	url = https://github.com/CQEN-QDCE/ceai-cqen-documentation
+	branch = main
+	

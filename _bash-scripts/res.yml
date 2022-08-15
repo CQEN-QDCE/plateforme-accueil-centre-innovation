@@ -4,3 +4,10 @@ candy:
   paths: [
     https://github.com/CQEN-QDCE/Candy/blob/main/README.md
   ]
+
+installation-asea-ceai:
+  project-title: Installation ASEA CEAI
+  url: https://github.com/CQEN-QDCE/ceai-cqen-documentation.git
+  paths: [
+    https://github.com/CQEN-QDCE/ceai-cqen-documentation/blob/main/Experimentations/installation_asea_ceai.md
+  ]

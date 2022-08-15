@@ -31,6 +31,8 @@ permalink: none
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
 
 # Default settings for the posts
 defaults:
@@ -42,8 +44,15 @@ defaults:
       layout: post
       categories: documentation
 
+  - scope:
+      path: "ceai-cqen-documentation"
+      type: pages
+    values:
+      layout: page
+     
+
 collections:
-  documentation-labs:
+  experimentations:
     output: true
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -66,11 +75,21 @@ collections:
 #   - vendor/ruby/
 exclude:
   - Dockerfile
-  - README.md
   - .codebuild/
 
 include:
   - _pages
+  - README.md
+  - CONTRIBUTING.md
+  - LICENCE.md
+markdown: kramdown
 
 kramdown:
   input: GFM
+
+relative_links:
+  enabled:     true
+  collections: true
+
+
+

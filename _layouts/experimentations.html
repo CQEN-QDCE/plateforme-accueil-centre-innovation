@@ -6,11 +6,17 @@ layout: default
         <h1 class="page-heading">{{ page.title }}</h1>
     {%- endif -%}
 
+    Pour vous aider à écrire votre rapport d'éxperimentation, nous avons créé un gabarit de référence:
+    <a href="{{site.baseurl}}/ceai-cqen-documentation/Experimentations/gabarit.html">Gabarit d'expérimentation</a>
+    
+    <br>
+
     {{ content }}
     
     <br>
+    <br>
     <ul class="post-list">
-      {% for lab in site.documentation-labs %}
+      {% for lab in site.experimentations %}
         {%- if lab.index == true -%} <!--Only show the indexes-->
           <li>
             <h3>
