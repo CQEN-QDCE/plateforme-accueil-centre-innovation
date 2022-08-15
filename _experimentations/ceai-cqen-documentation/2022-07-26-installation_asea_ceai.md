@@ -14,7 +14,7 @@ index: false
 ---
 
 <div>
-    <img src="./images/mcn.png">
+    <img src="https://github.com/CQEN-QDCE/.github/blob/main/images/mcn.png" />
 </div>
 <!-- FIN ENTETE -->
 
