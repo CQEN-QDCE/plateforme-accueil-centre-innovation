@@ -9,6 +9,7 @@ phases:
       - gem install bundler
       - bundle install
       
+      
   build:
     commands:
       - (cd _bash-scripts ; bundle exec ruby populate-graphql.rb)
