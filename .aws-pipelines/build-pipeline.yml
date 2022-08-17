@@ -8,15 +8,15 @@ phases:
     commands:
       - gem install bundler
       - bundle install
-      
+
       
   build:
     commands:
       - (cd _bash-scripts ; bundle exec ruby populate-graphql.rb)
       - bundle exec jekyll build
 
-artifacts:
-  type: zip
-  base-directory: '_site'
-  files:
-    - '**/*'
+# artifacts:
+#  type: zip
+#  base-directory: '_site'
+#  files:
+#    - '**/*'
