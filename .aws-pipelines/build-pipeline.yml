@@ -9,6 +9,10 @@ phases:
       - gem install bundler
       - bundle install
 
+  pre_build:
+    commands:
+      - echo Git Submodule update...
+      - git submodule update --remote  
       
   build:
     commands:
