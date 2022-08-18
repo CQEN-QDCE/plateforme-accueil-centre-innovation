@@ -1,5 +1,6 @@
 version: 0.2
 env:
+  git-credential-helper: yes
   variables:
     JEKYLL_ENV: production
 
@@ -20,7 +21,7 @@ phases:
       - bundle exec jekyll build
 
 artifacts:
-#  type: zip
+  type: zip
   base-directory: '_site'
   files:
     - '**/*'
