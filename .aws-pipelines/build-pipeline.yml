@@ -17,9 +17,13 @@ phases:
       
   build:
     commands:
-      - ls -la
       - (cd _bash-scripts ; bundle exec ruby populate-graphql.rb --trace)
       - bundle exec jekyll build
+      - echo LS -LA dans la racine.....
+      - ls -la
+      - echo LS -LA dans _SITE.....
+      - (cd _site ; ls -la)
+
 
 artifacts:
   type: zip
