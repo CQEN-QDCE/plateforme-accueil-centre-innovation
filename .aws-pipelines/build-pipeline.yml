@@ -1,5 +1,6 @@
 version: 0.2
 env:
+  git-credential-helper: yes
   variables:
     JEKYLL_ENV: production
 
@@ -8,9 +9,14 @@ phases:
     commands:
       - gem install bundler
       - bundle install
+
+  pre_build:
+    commands:
+      - git submodule update --init --recursive
+      
   build:
     commands:
-      - (cd _bash-scripts ; bundle exec ruby populate-graphql.rb)
+      - (cd _bash-scripts ; bundle exec ruby populate-graphql.rb --trace)
       - bundle exec jekyll build
 
 artifacts:
