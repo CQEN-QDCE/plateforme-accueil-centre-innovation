@@ -18,13 +18,6 @@ phases:
     commands:
       - (cd _bash-scripts ; bundle exec ruby populate-graphql.rb --trace)
       - bundle exec jekyll build
-      - echo LS -LA dans la racine.....
-      - ls -la
-      - echo LS -LA dans ceai-cqen-documentation.....
-      - (cd ceai-cqen-documentation ; ls -la ; cd ..)
-      - echo LS -LA dans _SITE.....
-      - (cd _site ; ls -la)
-
 
 artifacts:
   type: zip
