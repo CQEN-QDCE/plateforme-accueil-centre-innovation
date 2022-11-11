@@ -46,10 +46,10 @@
  
 ### Pour mettre à jour le submodule (contenu du site): 
 ```bash
-git submodule update --remote
+git submodule update --init --remote --recursive
 ``` 
 ## Déploiement en production
-Le pipeline de deploement sur AWS est démarré par : 
+Le pipeline de deploiement sur AWS est démarré par : 
 -	Un Github Pull Request se faisant accepter sur la branche main OU tout autre push sur la branche main. 
 
 - Vous pourrez voir le processus en cours d'exécution et voir les détails de chaque étape d'exécution en cliquant sur le pipeline sur le console AWS.

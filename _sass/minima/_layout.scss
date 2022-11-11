@@ -154,7 +154,9 @@ a.row-container {
   padding: 2em;
   background-color: #095797;
   color:white;
-  border-left: solid 50px $sidebar-column-bg;
+  border-left: solid 0px $sidebar-column-bg;
+  align-items: center;
+  text-align: center;
 }
 
 .portal-container {

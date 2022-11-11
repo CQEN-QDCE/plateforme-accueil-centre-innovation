@@ -40,9 +40,10 @@ defaults:
       path: "_posts/plateforme-accueil-contenu"
       type: posts
     values:
-      permalink: documentation/:title.html
+      permalink: none
+      # documentation/:title.html
       layout: post
-      categories: documentation
+      categorie: documentation
 
   - scope:
       path: "ceai-cqen-documentation"
