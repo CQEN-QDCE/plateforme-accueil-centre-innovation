@@ -47,6 +47,10 @@
 ### Pour mettre à jour le submodule (contenu du site): 
 ```bash
 git submodule update --init --remote --recursive
+# -- force doit être utilisé si l'on souhaite override le site existant
+# -- recursive : est utilisé afin de mettre à jour les sous-dossiers de façon récursive
+# -- remote : utilise le statut de la branche de suivi à distance du sous-module. La branche utilisé est ( branch.<name>.remote), par défaut origin. La branche distante utilisée par défaut est remote HEAD, mais le nom de la branche peut être remplacé en définissant l' submodule.<name>.branch option dans .gitmodulesou .git/config(avec .git/config priorité).
+# -- init : Initialise tous les sous-modules pour lesquels "git submodule init" n'a pas été appelé jusqu'à présent avant la mise à jour.
 ``` 
 ## Déploiement en production
 Le pipeline de deploiement sur AWS est démarré par : 
