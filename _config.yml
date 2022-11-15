@@ -26,6 +26,8 @@ description:
 # url: "https://cqen-qdce.github.io/plateforme-accueil-centre-innovation/" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: none
 
+source: .
+
 # Build settings
 
 plugins:
@@ -40,7 +42,8 @@ defaults:
       path: "_posts/plateforme-accueil-contenu"
       type: posts
     values:
-      permalink: documentation/:title.html
+      permalink: none
+      #documentation/:title.html
       layout: post
       categories: 
         - documentation
