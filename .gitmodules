@@ -4,6 +4,6 @@
 	branch = master
 [submodule "ceai-cqen-documentation"]
 	path = ceai-cqen-documentation
-	url = https://github.com/CQEN-QDCE/ceai-cqen-documentation
+	url = https://github.com/CQEN-QDCE/ceai-cqen-documentation.git
 	branch = main
 	
