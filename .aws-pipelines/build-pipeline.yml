@@ -12,7 +12,7 @@ phases:
 
   pre_build:
     commands:
-      - git submodule update --init --recursive
+      - git submodule update --init --recursive --force
       # -- force : n'est pas nécessaire (Force un remplacement des fichiers Override tout)
       # -- remote : met à jour à distance la branche spécifié dans le .gitmodules
       # -- recursive : met à jour les sous-modules égalements de manière récursif 
