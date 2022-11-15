@@ -41,7 +41,7 @@ defaults:
       type: posts
     values:
       permalink: none
-      # documentation/:title.html
+      documentation: title.html
       layout: post
       categorie: documentation
 
