@@ -40,8 +40,7 @@ defaults:
       path: "_posts/plateforme-accueil-contenu"
       type: posts
     values:
-      permalink: none
-      documentation: /title.html
+      permalink: documentation/:title.html
       layout: post
       categories: 
         - documentation
