@@ -8,6 +8,7 @@ phases:
   install:
     commands:
       - gem install bundler
+      - gem env home
       - bundle install
 
   pre_build:
