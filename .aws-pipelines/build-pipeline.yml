@@ -8,13 +8,12 @@ phases:
   install:
     commands:
       - gem install bundler
-      - gem env home
       - bundle install
 
   pre_build:
     commands:
       - git submodule init
-      - git submodule update --recursive
+      - git submodule update --recursive --trace
       # -- force : n'est pas nécessaire (Force un remplacement des fichiers Override tout)
       # -- remote : met à jour à distance la branche spécifié dans le .gitmodules
       # -- recursive : met à jour les sous-modules égalements de manière récursif 
