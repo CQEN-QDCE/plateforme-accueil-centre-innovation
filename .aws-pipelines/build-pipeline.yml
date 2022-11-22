@@ -13,13 +13,13 @@ phases:
   pre_build:
     commands:
       - git submodule init
-      - git submodule update --recursive --trace
+      - git submodule update --recursive
       # -- force : n'est pas nécessaire (Force un remplacement des fichiers Override tout)
       # -- remote : met à jour à distance la branche spécifié dans le .gitmodules
-      # -- recursive : met à jour les sous-modules égalements de manière récursif 
-      # -- init : Cette option n'est valide que pour la commande de mise à jour. 
+      # -- recursive : met à jour les sous-modules égalements de manière récursif
+      # -- init : Cette option n'est valide que pour la commande de mise à jour.
       #           Initialisez tous les sous-modules pour lesquels "git submodule init" n'a pas été appelé jusqu'à présent avant la mise à jour.
-      
+
   build:
     commands:
       - (cd _bash-scripts ; bundle exec ruby populate-graphql.rb --trace)
@@ -27,6 +27,6 @@ phases:
 
 artifacts:
   type: zip
-  base-directory: '_site'
+  base-directory: "_site"
   files:
-    - '**/*'
+    - "**/*"
