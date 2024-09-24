@@ -36,7 +36,7 @@ gem "graphql", "~> 1.12.14"
 
 # adressable versions 2.3.0, to 2.7.0 are highly vulnerable
 gem "addressable", ">= 2.8.0"
-gem "webrick", "~> 1.7"
+gem "webrick", "~> 1.8", ">= 1.8.2"
 gem 'jekyll-relative-links', '0.6.1'
 
 group :jekyll_plugins do
